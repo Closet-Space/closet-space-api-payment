@@ -1,0 +1,19 @@
+{
+  "name": "closetspacepaymentservice",
+  "version": "1.0.0",
+  "description": "Payment service for people to pay us",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "ClosetSpace LLC",
+  "license": "GNU",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "dotenv": "^8.2.0",
+    "lambda-tester": "^4.0.1",
+    "mocha": "^7.0.1",
+    "stripe": "^8.20.0",
+    "typescript": "^3.8.2"
+  }
+}
