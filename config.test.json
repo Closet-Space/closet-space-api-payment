@@ -1,0 +1,4 @@
+{
+    "StripePublishableKey": "/stripePublishableKey/test",
+    "StripeSecretKey": "/stripeSecretKey/test"
+}
