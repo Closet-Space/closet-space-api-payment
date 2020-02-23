@@ -2,11 +2,11 @@
 require('dotenv').config();
 
 const stripe = require('stripe')(process.env.TEST_SECRET_KEY);
+console.log(process.env.TEST_SECRET_KEY);
 // const AWS = require('aws-sdk');
 
 exports.handler = async (event, context) => {
-    const {customer} = JSON.parse(event).body;
-    console.log(customer);
+    const {customer} = event.body;
     let statusCode = 0;
     let responseBody = "";
 
@@ -20,12 +20,12 @@ exports.handler = async (event, context) => {
         stripe.customers.create({
             email: customer.email,
         })
-        .then(customer => {
+        .then((customer) => {
             console.log(customer.id);
             statusCode = 201;
             responseBody = customer.id;
         })
-        .catch(error => {
+        .catch((error) => {
             console.error(error);
             statusCode = 500;
             responseBody = error;
