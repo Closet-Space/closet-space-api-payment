@@ -2,7 +2,6 @@
 require('dotenv').config();
 
 const stripe = require('stripe')(process.env.TEST_SECRET_KEY);
-console.log(process.env.TEST_SECRET_KEY);
 // const AWS = require('aws-sdk');
 
 exports.handler = async (event, context) => {
